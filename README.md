@@ -1,6 +1,6 @@
 # Shilla Bakery
 
-🔗 **Live Demo:** [View Shilla Bakery Demo](shilla-bakery.vercel.app)
+🔗 **Live Demo:** [View Shilla Bakery Demo](https://shilla-bakery.vercel.app/)
 
 A responsive bakery web application built with **React, Vite, TypeScript, Tailwind CSS v4, and React Router**.
 
