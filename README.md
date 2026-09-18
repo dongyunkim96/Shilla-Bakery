@@ -1,5 +1,7 @@
 # Shilla Bakery
 
+🔗 **Live Demo:** [View Shilla Bakery Demo](YOUR_DEMO_URL_HERE)
+
 A responsive bakery web application built with **React, Vite, TypeScript, Tailwind CSS v4, and React Router**.
 
 This project is a modern front-end redesign inspired by the Shilla Bakery brand and website experience. It focuses on a clean responsive UI, structured routing, reusable components, and a data-driven menu system.
