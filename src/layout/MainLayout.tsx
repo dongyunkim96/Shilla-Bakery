@@ -1,17 +1,22 @@
-import { Outlet } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import { Outlet } from 'react-router-dom';
+import Footer from '../components/Footer';
+import IntroVideo from '../components/IntroVideo';
+import Navbar from '../components/Navbar';
 
 function MainLayout() {
-    return (
-        <div className="min-h-screen bg-amber-50 text-stone-800">
-            <Navbar />
-            <main>
-                <Outlet />
-            </main>
-            <Footer />
-        </div>
-    );
+  return (
+    <div className="min-h-screen bg-amber-50 text-stone-800">
+      <IntroVideo />
+
+      <Navbar />
+
+      <main className="w-full">
+        <Outlet />
+      </main>
+
+      <Footer />
+    </div>
+  );
 }
 
 export default MainLayout;
