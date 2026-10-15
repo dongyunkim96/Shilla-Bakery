@@ -499,7 +499,7 @@
     "description": "A smooth combination of espresso and steamed milk.",
     "details": "Creamy milk softens the bold espresso, creating a balanced drink that complements almost any bakery item.",
     "price": 4.75,
-    "image": "/menu/drink/drink-02.jpeg",
+    "image": "/menu/drink/drink-02.webp",
     "recommended": true,
     "bestSeller": false
   },
@@ -511,7 +511,7 @@
     "description": "A sweet and creamy latte flavored with aromatic vanilla.",
     "details": "Smooth espresso, steamed milk, and vanilla come together in a comforting drink that pairs especially well with desserts.",
     "price": 5.25,
-    "image": "/menu/drink/drink-03.jpeg",
+    "image": "/menu/drink/drink-03.webp",
     "recommended": false,
     "bestSeller": true
   },
@@ -523,7 +523,7 @@
     "description": "A rich coffee drink blending espresso, milk, and chocolate.",
     "details": "The bold flavor of espresso meets smooth chocolate and creamy milk in this dessert-like coffee beverage.",
     "price": 5.45,
-    "image": "/menu/drink/drink-04.jpeg",
+    "image": "/menu/drink/drink-04.webp",
     "recommended": true,
     "bestSeller": false
   },
@@ -535,7 +535,7 @@
     "description": "A sweet espresso drink finished with smooth caramel flavor.",
     "details": "Espresso, milk, and caramel create a popular drink with a satisfying balance of sweetness and bold coffee flavor.",
     "price": 5.65,
-    "image": "/menu/drink/drink-05.jpeg",
+    "image": "/menu/drink/drink-05.webp",
     "recommended": true,
     "bestSeller": true
   },
@@ -547,7 +547,7 @@
     "description": "A smooth and refreshing coffee brewed slowly over time.",
     "details": "This chilled coffee has a clean finish and lower perceived acidity, making it an easy choice for warm days.",
     "price": 4.95,
-    "image": "/menu/drink/drink-06.jpeg",
+    "image": "/menu/drink/drink-06.webp",
     "recommended": false,
     "bestSeller": false
   },
@@ -559,7 +559,7 @@
     "description": "A creamy latte with warm and nutty hazelnut flavor.",
     "details": "The gentle sweetness and roasted aroma of hazelnut pair especially well with croissants and cream-filled breads.",
     "price": 5.35,
-    "image": "/menu/drink/drink-07.jpeg",
+    "image": "/menu/drink/drink-07.webp",
     "recommended": false,
     "bestSeller": false
   },
@@ -571,7 +571,7 @@
     "description": "A smooth milk drink with earthy and aromatic matcha.",
     "details": "The gentle bitterness of matcha is softened by creamy milk for a balanced and refreshing beverage.",
     "price": 5.6,
-    "image": "/menu/drink/drink-08.jpeg",
+    "image": "/menu/drink/drink-08.webp",
     "recommended": true,
     "bestSeller": false
   },
@@ -583,7 +583,7 @@
     "description": "A warm and creamy tea latte flavored with aromatic spices.",
     "details": "Sweet tea and fragrant spices create a comforting drink that is especially enjoyable during cooler seasons.",
     "price": 5.5,
-    "image": "/menu/drink/drink-09.jpeg",
+    "image": "/menu/drink/drink-09.webp",
     "recommended": false,
     "bestSeller": false
   },
@@ -595,7 +595,7 @@
     "description": "A rich and creamy chocolate drink served warm.",
     "details": "Smooth milk and deep chocolate flavor create a comforting beverage that can be enjoyed on its own or with dessert.",
     "price": 4.95,
-    "image": "/menu/drink/drink-10.jpeg",
+    "image": "/menu/drink/drink-10.webp",
     "recommended": true,
     "bestSeller": true
   },
@@ -607,7 +607,7 @@
     "description": "A light and refreshing chilled tea.",
     "details": "Clean and easy to drink, this iced tea is a refreshing companion to sweet breads, cakes, and savory pastries.",
     "price": 3.95,
-    "image": "/menu/drink/drink-11.jpeg",
+    "image": "/menu/drink/drink-11.webp",
     "recommended": false,
     "bestSeller": false
   },
@@ -619,7 +619,7 @@
     "description": "A sparkling fruit drink with sweet peach flavor.",
     "details": "Bright peach aroma and refreshing carbonation make this an enjoyable choice for customers who prefer fruity drinks.",
     "price": 5.15,
-    "image": "/menu/drink/drink-12.jpeg",
+    "image": "/menu/drink/drink-12.webp",
     "recommended": true,
     "bestSeller": false
   },
@@ -631,7 +631,7 @@
     "description": "A bright and sparkling drink with fresh lemon flavor.",
     "details": "Its crisp citrus taste provides a refreshing contrast to rich cakes, cream breads, and other sweet bakery items.",
     "price": 4.95,
-    "image": "/menu/drink/drink-13.jpeg",
+    "image": "/menu/drink/drink-13.webp",
     "recommended": false,
     "bestSeller": false
   },
@@ -643,7 +643,7 @@
     "description": "A thick and creamy smoothie with sweet strawberry flavor.",
     "details": "Fresh fruit flavor and a smooth texture make this refreshing drink satisfying enough to enjoy as a dessert.",
     "price": 5.95,
-    "image": "/menu/drink/drink-14.jpeg",
+    "image": "/menu/drink/drink-14.webp",
     "recommended": true,
     "bestSeller": true
   },
@@ -655,7 +655,7 @@
     "description": "A creamy frozen drink with rich tropical mango flavor.",
     "details": "Sweet, refreshing, and smooth, this fruit-forward beverage is especially enjoyable during warmer weather.",
     "price": 6.1,
-    "image": "/menu/drink/drink-15.jpeg",
+    "image": "/menu/drink/drink-15.webp",
     "recommended": true,
     "bestSeller": false
   },
@@ -667,7 +667,7 @@
     "description": "A light and refreshing juice with sweet green grape flavor.",
     "details": "Its clean fruit flavor and gentle sweetness make it a refreshing pairing for breads, cakes, and pastries.",
     "price": 5.55,
-    "image": "/menu/drink/drink-16.jpeg",
+    "image": "/menu/drink/drink-16.webp",
     "recommended": false,
     "bestSeller": false
   },
@@ -679,7 +679,7 @@
     "description": "A fragrant citrus tea with sweet and refreshing yuzu flavor.",
     "details": "Enjoyed hot or cold, this aromatic drink offers a bright citrus taste and a soothing finish.",
     "price": 4.85,
-    "image": "/menu/drink/drink-17.jpeg",
+    "image": "/menu/drink/drink-17.webp",
     "recommended": true,
     "bestSeller": false
   },
@@ -691,7 +691,7 @@
     "description": "A classic black tea with a delicate bergamot aroma.",
     "details": "Light, floral, and elegant, this traditional tea pairs particularly well with cakes, cookies, and pastries.",
     "price": 4.25,
-    "image": "/menu/drink/drink-18.jpeg",
+    "image": "/menu/drink/drink-18.webp",
     "recommended": false,
     "bestSeller": false
   },
@@ -703,7 +703,7 @@
     "description": "A rich and creamy milk tea with a smooth black tea flavor.",
     "details": "Fragrant tea and creamy milk create a comforting beverage with a gentle sweetness and smooth finish.",
     "price": 5.45,
-    "image": "/menu/drink/drink-19.jpeg",
+    "image": "/menu/drink/drink-19.webp",
     "recommended": true,
     "bestSeller": true
   },
@@ -715,7 +715,7 @@
     "description": "A small and concentrated coffee with bold roasted flavor.",
     "details": "This intense coffee highlights the aroma and character of espresso in a short, straightforward serving.",
     "price": 3.0,
-    "image": "/menu/drink/drink-20.jpeg",
+    "image": "/menu/drink/drink-20.webp",
     "recommended": false,
     "bestSeller": false
   }

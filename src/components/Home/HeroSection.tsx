@@ -2,54 +2,156 @@ import { Link } from 'react-router-dom';
 
 function HeroSection() {
   return (
-    <section className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-10 px-4 py-12 sm:px-6 md:gap-12 md:py-16 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-24">
-      <div className="order-2 lg:order-1">
-        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.25em] text-amber-700 sm:text-sm">
-          Since 1999
-        </p>
+    <section className="relative min-h-[620px] overflow-hidden sm:min-h-[700px] lg:min-h-[760px]">
+      {/* Background Image */}
+      <img
+        src="/assets/shillabakery.jpg"
+        alt="Shilla Bakery interior with cakes and bakery displays"
+        className="
+          absolute
+          inset-0
+          h-full
+          w-full
+          object-cover
+          object-[60%_center]
+          sm:object-[58%_center]
+          lg:object-[55%_center]
+        "
+      />
 
-        <h1 className="text-3xl font-bold leading-tight text-amber-950 sm:text-4xl md:text-5xl lg:text-6xl">
-          Fresh breads, cakes, and pastries made to brighten everyday moments.
-        </h1>
+      {/* Overall Overlay */}
+      <div className="absolute inset-0 bg-black/25" />
 
-        <p className="mt-5 max-w-2xl text-sm leading-7 text-stone-600 sm:text-base md:text-lg">
-          Shilla Bakery began in a small basement bakery in 1999 and continues
-          to focus on creating breads, cakes, and pastries worth sharing with
-          family, friends, and special occasions.
-        </p>
+      {/* Left Gradient for Text Readability */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/10" />
 
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-          <Link
-            to="/menu"
-            className="rounded-full bg-amber-700 px-6 py-3 text-center text-sm font-semibold text-white transition hover:bg-amber-800 sm:text-base"
+      {/* Bottom Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
+
+      {/* Content */}
+      <div
+        className="
+          relative
+          z-10
+          mx-auto
+          flex
+          min-h-[620px]
+          w-full
+          max-w-7xl
+          items-center
+          px-4
+          py-20
+          sm:min-h-[700px]
+          sm:px-6
+          lg:min-h-[760px]
+          lg:px-8
+        "
+      >
+        <div className="max-w-xl text-white md:max-w-2xl">
+          <p
+            className="
+              mb-4
+              text-xs
+              font-semibold
+              uppercase
+              tracking-[0.35em]
+              text-amber-300
+              sm:text-sm
+            "
           >
-            View Menu
-          </Link>
+            Shilla Bakery
+          </p>
 
-          <Link
-            to="/contact"
-            className="rounded-full border border-amber-300 px-6 py-3 text-center text-sm font-semibold text-amber-900 transition hover:bg-amber-100 sm:text-base"
+          <h1
+            className="
+              mb-6
+              text-4xl
+              font-bold
+              leading-[1.1]
+              sm:text-5xl
+              md:text-6xl
+              lg:text-7xl
+            "
           >
-            Find a Location
-          </Link>
+            Freshly baked.
+            <br />
+            Made to be shared.
+          </h1>
+
+          <p
+            className="
+              mb-8
+              max-w-xl
+              text-base
+              leading-8
+              text-stone-100
+              sm:text-lg
+              md:text-xl
+            "
+          >
+            Discover freshly baked breads, handcrafted cakes, pastries, and
+            café favorites made for everyday moments and special celebrations.
+          </p>
+
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <Link
+              to="/menu"
+              className="
+                rounded-full
+                bg-amber-600
+                px-7
+                py-3.5
+                text-center
+                text-sm
+                font-semibold
+                text-white
+                shadow-lg
+                transition
+                duration-300
+                hover:-translate-y-0.5
+                hover:bg-amber-700
+                sm:text-base
+              "
+            >
+              Explore Menu
+            </Link>
+
+            <Link
+              to="/contact"
+              className="
+                rounded-full
+                border
+                border-white/60
+                bg-black/20
+                px-7
+                py-3.5
+                text-center
+                text-sm
+                font-semibold
+                text-white
+                backdrop-blur-sm
+                transition
+                duration-300
+                hover:-translate-y-0.5
+                hover:bg-white
+                hover:text-stone-900
+                sm:text-base
+              "
+            >
+              Find a Location
+            </Link>
+          </div>
         </div>
       </div>
 
-      <div className="order-1 lg:order-2">
-        <div className="rounded-[1.75rem] bg-gradient-to-br from-amber-200 via-orange-100 to-rose-100 p-4 shadow-lg sm:p-5 md:p-6">
-          <div className="flex min-h-[260px] items-center justify-center rounded-[1.5rem] border border-white/60 bg-white/60 p-6 text-center backdrop-blur sm:min-h-[320px] md:min-h-[380px]">
-            <div>
-              <p className="mb-3 text-xs font-medium uppercase tracking-[0.25em] text-amber-700 sm:text-sm">
-                Shilla Bakery
-              </p>
-              <h2 className="text-2xl font-bold text-amber-950 sm:text-3xl">
-                Freshly baked, thoughtfully shared
-              </h2>
-              <p className="mt-3 text-sm text-stone-600 sm:text-base">
-                대표 베이커리 이미지나 시그니처 제품 사진이 들어갈 자리
-              </p>
-            </div>
-          </div>
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-6 left-1/2 z-10 hidden -translate-x-1/2 md:block">
+        <div className="flex flex-col items-center gap-2 text-white/80">
+          <span className="text-[10px] font-medium uppercase tracking-[0.3em]">
+            Discover
+          </span>
+
+          <div className="h-8 w-px bg-white/50" />
         </div>
       </div>
     </section>

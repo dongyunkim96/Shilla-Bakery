@@ -5,12 +5,12 @@ import Navbar from '../components/Navbar';
 
 function MainLayout() {
   return (
-    <div className="min-h-screen bg-amber-50 text-stone-800">
+    <div className="flex min-h-screen flex-col bg-stone-50 text-stone-800">
       <IntroVideo />
 
       <Navbar />
 
-      <main className="w-full">
+      <main className="w-full flex-1">
         <Outlet />
       </main>
 

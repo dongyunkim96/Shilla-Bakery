@@ -1,4 +1,5 @@
-type Category = 'all' | 'bread' | 'coffee' | 'dessert';
+type Category = 'all' | 'bread' | 'dessert' | 'drink';
+
 type SortOption = 'default' | 'price-low' | 'price-high';
 
 type MenuFilterBarProps = {
@@ -7,32 +8,8 @@ type MenuFilterBarProps = {
   sortOption: SortOption;
   onCategoryChange: (category: Category) => void;
   onSearchChange: (value: string) => void;
-  onSortChange: (value: SortOption) => void;
+  onSortChange: (sort: SortOption) => void;
 };
-
-function FilterButton({
-  isActive,
-  label,
-  onClick,
-}: {
-  isActive: boolean;
-  label: string;
-  onClick: () => void;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-        isActive
-          ? 'bg-amber-700 text-white'
-          : 'bg-white text-amber-900 border border-amber-200 hover:bg-amber-50'
-      }`}
-    >
-      {label}
-    </button>
-  );
-}
 
 function MenuFilterBar({
   activeCategory,
@@ -42,48 +19,51 @@ function MenuFilterBar({
   onSearchChange,
   onSortChange,
 }: MenuFilterBarProps) {
+  const categories: { label: string; value: Category }[] = [
+    { label: 'All', value: 'all' },
+    { label: 'Bread', value: 'bread' },
+    { label: 'Dessert', value: 'dessert' },
+    { label: 'Drinks', value: 'drink' },
+  ];
+
   return (
-    <div className="mb-8 rounded-[1.5rem] border border-amber-200 bg-amber-50 p-4 sm:p-5">
-      <div className="flex flex-wrap gap-3">
-        <FilterButton
-          label="All"
-          isActive={activeCategory === 'all'}
-          onClick={() => onCategoryChange('all')}
-        />
-        <FilterButton
-          label="Bread"
-          isActive={activeCategory === 'bread'}
-          onClick={() => onCategoryChange('bread')}
-        />
-        <FilterButton
-          label="Coffee"
-          isActive={activeCategory === 'coffee'}
-          onClick={() => onCategoryChange('coffee')}
-        />
-        <FilterButton
-          label="Dessert"
-          isActive={activeCategory === 'dessert'}
-          onClick={() => onCategoryChange('dessert')}
-        />
+    <div className="space-y-5">
+      {/* Category Buttons */}
+      <div className="flex flex-wrap gap-2">
+        {categories.map((category) => (
+          <button
+            key={category.value}
+            type="button"
+            onClick={() => onCategoryChange(category.value)}
+            className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
+              activeCategory === category.value
+                ? 'bg-amber-700 text-white'
+                : 'bg-stone-100 text-stone-700 hover:bg-amber-50 hover:text-amber-900'
+            }`}
+          >
+            {category.label}
+          </button>
+        ))}
       </div>
 
-      <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2">
+      {/* Search + Sort */}
+      <div className="grid gap-3 md:grid-cols-[1fr_auto]">
         <input
           type="text"
           value={searchKeyword}
-          onChange={(event) => onSearchChange(event.target.value)}
-          placeholder="Search menu..."
-          className="w-full rounded-2xl border border-amber-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-amber-500"
+          onChange={(e) => onSearchChange(e.target.value)}
+          placeholder="Search breads, desserts, or drinks..."
+          className="w-full rounded-2xl border border-stone-200 bg-white px-4 py-3 text-sm text-stone-800 outline-none transition placeholder:text-stone-400 focus:border-amber-400 focus:ring-2 focus:ring-amber-100"
         />
 
         <select
           value={sortOption}
-          onChange={(event) =>
-            onSortChange(event.target.value as SortOption)
+          onChange={(e) =>
+            onSortChange(e.target.value as SortOption)
           }
-          className="w-full rounded-2xl border border-amber-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-amber-500"
+          className="rounded-2xl border border-stone-200 bg-white px-4 py-3 text-sm text-stone-700 outline-none transition focus:border-amber-400 focus:ring-2 focus:ring-amber-100"
         >
-          <option value="default">Sort: Default</option>
+          <option value="default">Sort by</option>
           <option value="price-low">Price: Low to High</option>
           <option value="price-high">Price: High to Low</option>
         </select>

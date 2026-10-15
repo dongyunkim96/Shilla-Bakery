@@ -22,3 +22,24 @@ body {
   background-color: #fffbeb;
   color: #292524;
 }
+
+@keyframes introProgress {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.intro-progress {
+  animation: introProgress 10s linear forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-progress {
+    animation: none;
+    width: 100%;
+  }
+}

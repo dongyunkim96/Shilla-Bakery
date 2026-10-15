@@ -5,10 +5,13 @@ import VisitSection from '../components/Home/VisitSection';
 
 function HomePage() {
   return (
-    <div className="w-full">
+    <div className="w-full overflow-hidden">
       <HeroSection />
+
       <SignatureSection />
+
       <StorySection />
+
       <VisitSection />
     </div>
   );
