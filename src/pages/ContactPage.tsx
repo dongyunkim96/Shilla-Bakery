@@ -3,7 +3,7 @@ const locations = [
     name: 'Annandale',
     state: 'Virginia',
     address: '7039 Little River Tpke, Annandale, VA 22003',
-    phone: '+1 703 333 2001',
+    phone: '+1 (703) 333 - 2001',
     phoneLink: '+17033332001',
     hours: ['Daily', '7:00 AM – 9:00 PM'],
   },
@@ -11,7 +11,7 @@ const locations = [
     name: 'Tysons',
     state: 'Virginia',
     address: '1961 Chain Bridge Rd, McLean, VA 22102',
-    phone: '+1 703 388 2880',
+    phone: '+1 (703) 388 - 2880',
     phoneLink: '+17033882880',
     hours: [
       'Sunday: 11:00 AM – 7:00 PM',
@@ -23,7 +23,7 @@ const locations = [
     name: 'Chantilly',
     state: 'Virginia',
     address: '13938 Metrotech Dr, Chantilly, VA 20151',
-    phone: '+1 571 752 6397',
+    phone: '+1 (571) 752 - 6397',
     phoneLink: '+15717526397',
     hours: ['Daily', '7:00 AM – 9:15 PM'],
   },
@@ -31,7 +31,7 @@ const locations = [
     name: 'Vienna',
     state: 'Virginia',
     address: '340 Maple Ave W, Vienna, VA 22180',
-    phone: '+1 571 407 7063',
+    phone: '+1 (571) 407 - 7063',
     phoneLink: '+15714077063',
     hours: [
       'Sunday: 7:00 AM – 9:00 PM',
@@ -42,7 +42,7 @@ const locations = [
     name: 'Shilla Patisserie',
     state: 'Virginia',
     address: '6015 Centreville Crest Ln, Centreville, VA 20121',
-    phone: '+1 703 266 6001',
+    phone: '+1 (703) 266 - 6001',
     phoneLink: '+17032666001',
     hours: [
       'Sunday – Thursday: 8:00 AM – 9:00 PM',
@@ -53,7 +53,7 @@ const locations = [
     name: 'Ellicott City',
     state: 'Maryland',
     address: '9339 Baltimore National Pike, Ellicott City, MD 21042',
-    phone: '+1 410 418 8811',
+    phone: '+1 (410) 418 - 8811',
     phoneLink: '+14104188811',
     hours: [
       'Sunday – Monday: 8:00 AM – 8:00 PM',
