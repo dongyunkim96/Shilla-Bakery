@@ -39,7 +39,7 @@ const locations = [
     ],
   },
   {
-    name: 'Shilla Patisserie',
+    name: 'Centreville',
     state: 'Virginia',
     address: '6015 Centreville Crest Ln, Centreville, VA 20121',
     phone: '+1 (703) 266 - 6001',

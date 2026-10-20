@@ -1,7 +1,8 @@
-import HeroSection from '../components/Home/HeroSection';
-import SignatureSection from '../components/Home/SignatureSection';
-import StorySection from '../components/Home/StorySection';
-import VisitSection from '../components/Home/VisitSection';
+import HeroSection from '../components/home/HeroSection';
+import SignatureSection from '../components/home/SignatureSection';
+import StorySection from '../components/home/StorySection';
+import VisitSection from '../components/home/VisitSection';
+import InstagramSection from '../components/home/InstagramSection';
 
 function HomePage() {
   return (
@@ -13,6 +14,8 @@ function HomePage() {
       <StorySection />
 
       <VisitSection />
+
+      <InstagramSection />
     </div>
   );
 }
