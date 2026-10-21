@@ -8,7 +8,7 @@ Shilla Bakery is a production-style front-end project focused on responsive desi
 
 ## Live Demo
 
-**Live Demo:** [View Shilla Bakery]((https://shilla-bakery.vercel.app/))
+**Live Demo:** [View Shilla Bakery](https://shilla-bakery.vercel.app/)
 
 **Repository:** [GitHub - Shilla Bakery](https://github.com/dongyunkim96/Shilla-Bakery)
 
