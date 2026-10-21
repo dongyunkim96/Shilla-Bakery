@@ -1,173 +1,231 @@
 # Shilla Bakery
 
-🔗 **Live Demo:** [View Shilla Bakery Demo](https://shilla-bakery.vercel.app/)
+A modern, responsive bakery website built with React, TypeScript, Vite, and Tailwind CSS.
 
-A responsive bakery web application built with **React, Vite, TypeScript, Tailwind CSS v4, and React Router**.
+Shilla Bakery is a production-style front-end project focused on responsive design, reusable component architecture, menu discovery, store information, accessibility, automated testing, and continuous integration.
 
-This project is a modern front-end redesign inspired by the Shilla Bakery brand and website experience. It focuses on a clean responsive UI, structured routing, reusable components, and a data-driven menu system.
+---
+
+## Live Demo
+
+**Live Demo:** [View Shilla Bakery]((https://shilla-bakery.vercel.app/))
+
+**Repository:** [GitHub - Shilla Bakery](https://github.com/dongyunkim96/Shilla-Bakery)
 
 ---
 
 ## Overview
 
-The goal of this project is to build a bakery website that works naturally across:
+Shilla Bakery is a responsive multi-page bakery website designed to provide customers with a modern way to:
 
-- Mobile phones
-- Tablets
-- Laptops
-- Desktop screens
+- Browse breads, desserts, and drinks
+- Search and filter menu items
+- View individual product details
+- Learn about the bakery
+- Find store locations
+- Access Google Maps directions
+- Contact stores by phone or email
+- Explore Instagram content and bakery updates
 
-The application includes:
+The application was built with a component-based React architecture and includes automated unit, component, integration, and end-to-end testing.
 
-- Responsive navigation
-- Mobile hamburger menu
-- Shared page layout
-- Home page sections
-- Menu page
-- Menu filtering
-- Menu search
-- Price sorting
-- Menu detail pages
-- Recommended badges
-- Best Seller badges
-- Responsive menu cards
-- Product images
-- About page
-- Contact / locations page
-- Footer
+The project is optimized for both desktop and mobile environments.
 
-The project currently uses local JSON data for menu items. No external API is required.
+---
+
+## Features
+
+### Responsive Design
+
+The website is designed to work across:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+Responsive layouts are implemented with Tailwind CSS and verified using automated Playwright browser tests.
+
+---
+
+### Intro Video Experience
+
+A custom intro video is displayed when users first visit the website.
+
+Features include:
+
+- Cinematic intro overlay
+- Enter / Skip controls
+- Escape key support
+- Automatic closing when the video finishes
+- Session-based display using `sessionStorage`
+- Prevents repeated playback during the same browser session
+- Responsive behavior on mobile devices
+
+---
+
+### Menu System
+
+The menu page organizes products into categories such as:
+
+- Bread
+- Desserts
+- Coffee & Drinks
+
+Each menu item includes:
+
+- Product image
+- Product name
+- Description
+- Detailed information
+- Price
+- Recommended badge
+- Best Seller badge
+- Dedicated detail page
+
+Users can:
+
+- Filter products by category
+- Search menu items
+- Sort items by price
+- Open individual product detail pages
+- Clear filters and return to the full menu
+
+---
+
+### Home Page
+
+The home page is divided into reusable sections:
+
+- Hero Section
+- Signature Selections
+- Brand Story
+- Visit Section
+- Instagram Section
+
+Each section is implemented as a dedicated React component for better maintainability and reusability.
+
+---
+
+### Instagram Integration
+
+The website contains an Instagram-focused promotional section featuring looping bakery videos.
+
+Content highlights include:
+
+- Fresh bakery items
+- Cakes and desserts
+- Seasonal products
+- Coffee and café drinks
+
+Visitors can directly access the official Shilla Bakery Instagram page.
+
+---
+
+### Locations & Contact
+
+The contact page provides information for multiple Shilla Bakery locations.
+
+Locations include:
+
+- Annandale
+- Tysons
+- Chantilly
+- Vienna
+- Centreville / Shilla Patisserie
+- Ellicott City
+
+Location information can include:
+
+- Address
+- Phone number
+- Google Maps directions
+
+The website also supports:
+
+- `tel:` phone links
+- `mailto:` email links
+- Google Maps links
+- Catering information
+
+---
+
+### About Page
+
+The About page presents additional brand and business information including:
+
+- Shilla Bakery history
+- Korean bakery identity
+- Product philosophy
+- Customer experience
+- Store locations
+- Catering information
 
 ---
 
 ## Tech Stack
 
-- **React**
-- **Vite**
-- **TypeScript**
-- **Tailwind CSS v4**
-- **React Router**
-- **Node.js 24**
-- **npm**
-- **Git / GitHub**
+### Frontend
 
-### Tailwind CSS v4
+- React
+- TypeScript
+- Vite
+- React Router
+- Tailwind CSS v4
 
-This project uses the Tailwind CSS v4 Vite integration.
+### Testing
 
-`vite.config.ts` uses:
+- Vitest
+- React Testing Library
+- Jest DOM
+- Playwright
+- V8 Coverage
 
-```ts
-import tailwindcss from "@tailwindcss/vite";
-```
+### Development Tools
 
-The main stylesheet uses:
+- ESLint
+- npm
+- Git
+- GitHub
+- GitHub Actions
 
-```css
-@import "tailwindcss";
-```
+### Deployment
 
-This project does **not** use the older Tailwind v3 setup:
-
-```bash
-npx tailwindcss init -p
-```
-
----
-
-## Getting Started
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/dongyunkim96/Shilla-Bakery.git
-```
-
-### 2. Enter the project
-
-```bash
-cd Shilla-Bakery
-```
-
-### 3. Install dependencies
-
-```bash
-npm install
-```
-
-### 4. Start the development server
-
-```bash
-npm run dev
-```
-
-Vite will display a local development URL, usually:
-
-```text
-http://localhost:5173
-```
-
----
-
-## Node Version
-
-The project was configured using **Node.js 24**.
-
-Check your version:
-
-```bash
-node -v
-npm -v
-```
-
-If you use `nvm`:
-
-```bash
-nvm use 24
-```
-
-You can verify the active Node version with:
-
-```bash
-nvm current
-```
+- Vercel
 
 ---
 
 ## Project Structure
 
 ```text
-shilla-bakery/
+Shilla-Bakery/
+│
 ├── public/
-│   └── menu/
-│       ├── bread/
-│       │   ├── bread-01.jpeg
-│       │   ├── bread-02.jpeg
-│       │   └── ...
-│       ├── dessert/
-│       │   ├── dessert-01.jpeg
-│       │   ├── dessert-02.jpeg
-│       │   └── ...
-│       └── drink/
-│           ├── drink-01.jpeg
-│           ├── drink-02.jpeg
-│           └── ...
+│   ├── assets/
+│   ├── menu/
+│   │   ├── bread/
+│   │   ├── dessert/
+│   │   └── drink/
+│   └── video/
 │
 ├── src/
 │   ├── components/
-│   │   ├── Navbar.tsx
-│   │   ├── Footer.tsx
-│   │   │
 │   │   ├── home/
 │   │   │   ├── HeroSection.tsx
+│   │   │   ├── InstagramSection.tsx
 │   │   │   ├── SignatureSection.tsx
 │   │   │   ├── StorySection.tsx
 │   │   │   └── VisitSection.tsx
 │   │   │
-│   │   └── menu/
-│   │       ├── MenuCard.tsx
-│   │       ├── MenuFilterBar.tsx
-│   │       └── MenuSection.tsx
+│   │   ├── menu/
+│   │   │   ├── MenuCard.tsx
+│   │   │   ├── MenuFilterBar.tsx
+│   │   │   └── MenuSection.tsx
+│   │   │
+│   │   ├── Footer.tsx
+│   │   ├── IntroVideo.tsx
+│   │   ├── Navbar.tsx
+│   │   └── ScrollToTop.tsx
 │   │
 │   ├── data/
 │   │   └── menuData.json
@@ -176,991 +234,689 @@ shilla-bakery/
 │   │   └── MainLayout.tsx
 │   │
 │   ├── pages/
-│   │   ├── HomePage.tsx
-│   │   ├── MenuPage.tsx
-│   │   ├── MenuDetailPage.tsx
 │   │   ├── AboutPage.tsx
-│   │   └── ContactPage.tsx
+│   │   ├── ContactPage.tsx
+│   │   ├── HomePage.tsx
+│   │   ├── MenuDetailPage.tsx
+│   │   └── MenuPage.tsx
+│   │
+│   ├── test/
+│   │   ├── renderWithRouter.tsx
+│   │   └── setup.ts
+│   │
+│   ├── types/
+│   │   └── menu.ts
 │   │
 │   ├── App.tsx
-│   ├── main.tsx
-│   └── index.css
+│   ├── index.css
+│   └── main.tsx
 │
-├── package.json
-├── tsconfig.json
+├── tests/
+│   ├── external-links.spec.ts
+│   ├── home.spec.ts
+│   ├── intro.spec.ts
+│   ├── menu.spec.ts
+│   ├── navigation.spec.ts
+│   └── responsive.spec.ts
+│
+├── .github/
+│   └── workflows/
+│       └── test.yml
+│
+├── eslint.config.js
+├── playwright.config.ts
 ├── vite.config.ts
+├── vitest.config.ts
+├── package.json
 └── README.md
 ```
 
 ---
 
-# Application Architecture
+## Getting Started
 
-## `App.tsx`
+### Prerequisites
 
-`App.tsx` is responsible for application routing.
+Make sure the following tools are installed:
 
-Example structure:
+- Node.js 24+
+- npm
+- Git
 
-```tsx
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import MainLayout from "./layout/MainLayout";
-import HomePage from "./pages/HomePage";
-import MenuPage from "./pages/MenuPage";
-import MenuDetailPage from "./pages/MenuDetailPage";
-import AboutPage from "./pages/AboutPage";
-import ContactPage from "./pages/ContactPage";
+Check your installed versions:
 
-function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<MainLayout />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/menu" element={<MenuPage />} />
-          <Route path="/menu/:slug" element={<MenuDetailPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
-}
-
-export default App;
+```bash
+node -v
+npm -v
+git --version
 ```
 
 ---
 
-## Why `MainLayout` and `HomePage` Are Separate
+## Installation
 
-The layout and page components have different responsibilities.
+Clone the repository:
 
-### `MainLayout`
+```bash
+git clone https://github.com/dongyunkim96/Shilla-Bakery.git
+```
 
-Contains UI shared by multiple pages:
+Navigate into the project:
+
+```bash
+cd Shilla-Bakery
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Vite will typically start the application at:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## Available Scripts
+
+### Development Server
+
+```bash
+npm run dev
+```
+
+Starts the Vite development server.
+
+---
+
+### Production Build
+
+```bash
+npm run build
+```
+
+Runs the TypeScript compiler and creates an optimized production build.
+
+Production files are generated in:
+
+```text
+dist/
+```
+
+---
+
+### Preview Production Build
+
+```bash
+npm run preview
+```
+
+Runs the production build locally.
+
+---
+
+### ESLint
+
+```bash
+npm run lint
+```
+
+Checks the project for linting errors and warnings.
+
+---
+
+### Unit & Component Tests
+
+```bash
+npm run test:run
+```
+
+Runs the Vitest test suite once.
+
+---
+
+### Test Coverage
+
+```bash
+npm run test:coverage
+```
+
+Generates a coverage report using V8.
+
+---
+
+### End-to-End Tests
+
+```bash
+npm run test:e2e
+```
+
+Runs the Playwright E2E test suite.
+
+---
+
+## Testing
+
+The project includes automated testing at multiple levels.
+
+### Unit & Component Testing
+
+Vitest and React Testing Library are used for component and page-level testing.
+
+Current test results:
+
+```text
+Test Files: 12 passed
+Tests:      32 passed
+```
+
+Tested areas include:
 
 - Navbar
-- Main content area
-- Footer
-
-Example:
-
-```tsx
-import { Outlet } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-
-function MainLayout() {
-  return (
-    <div className="min-h-screen bg-amber-50 text-stone-800">
-      <Navbar />
-
-      <main className="w-full">
-        <Outlet />
-      </main>
-
-      <Footer />
-    </div>
-  );
-}
-
-export default MainLayout;
-```
-
-`Outlet` tells React Router where the current child page should appear.
-
-### `HomePage`
-
-Contains only content specific to the homepage.
-
-```tsx
-import HeroSection from "../components/home/HeroSection";
-import SignatureSection from "../components/home/SignatureSection";
-import StorySection from "../components/home/StorySection";
-import VisitSection from "../components/home/VisitSection";
-
-function HomePage() {
-  return (
-    <div className="w-full">
-      <HeroSection />
-      <SignatureSection />
-      <StorySection />
-      <VisitSection />
-    </div>
-  );
-}
-
-export default HomePage;
-```
-
-This architecture prevents large components from becoming difficult to maintain.
+- Intro video
+- Menu cards
+- Menu filtering
+- Menu sections
+- Menu detail pages
+- Home page components
+- About page
+- Contact page
+- Main layout
 
 ---
 
-# Responsive Design
+### Test Coverage
 
-The application follows a **mobile-first** approach.
+Run:
 
-Tailwind breakpoint examples:
-
-```tsx
-className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+```bash
+npm run test:coverage
 ```
 
-This means:
+Current coverage:
 
-- Mobile: `text-3xl`
-- Small screens: `text-4xl`
-- Medium screens: `text-5xl`
-- Large screens: `text-6xl`
-
-Another example:
-
-```tsx
-className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3"
+```text
+Statements: 84%+
+Branches:   69%+
+Functions:  81%+
+Lines:      84%+
 ```
 
-The menu displays:
+Coverage is generated using the V8 provider.
 
-- 1 card per row on mobile
-- 2 cards on small/medium screens
-- 3 cards on large screens
+---
 
-The project avoids unnecessary fixed widths such as:
+## End-to-End Testing
 
-```tsx
-w-[1200px]
+Playwright is used to test complete user flows inside real browser environments.
+
+Run:
+
+```bash
+npm run test:e2e
 ```
 
-Instead it uses responsive containers:
+The E2E test suite verifies:
 
-```tsx
-w-full max-w-7xl
+- Home page rendering
+- Intro video behavior
+- Intro session persistence
+- Menu page rendering
+- Menu category filtering
+- Search input behavior
+- Price sorting
+- Menu detail navigation
+- Desktop navigation
+- Mobile navigation
+- Mobile hamburger menu
+- Instagram links
+- Google Maps links
+- Telephone links
+- Email links
+- Responsive layouts
+- Horizontal overflow
+
+Playwright tests are executed against desktop and mobile browser configurations.
+
+---
+
+## Testing Strategy
+
+The project intentionally separates component tests from browser-level E2E tests.
+
+### Vitest Tests
+
+Vitest tests are colocated with application source files.
+
+```text
+src/**/*.test.tsx
+```
+
+Examples:
+
+```text
+Navbar.test.tsx
+IntroVideo.test.tsx
+MenuCard.test.tsx
+MenuFilterBar.test.tsx
+MenuSection.test.tsx
+MenuPage.test.tsx
+MenuDetailPage.test.tsx
+ContactPage.test.tsx
+AboutPage.test.tsx
 ```
 
 ---
 
-# Navbar
+### Playwright Tests
 
-The Navbar supports both desktop and mobile layouts.
+Browser-level E2E tests are stored separately.
 
-On desktop, navigation links are displayed horizontally.
-
-On mobile, a hamburger button controls the menu using React state:
-
-```tsx
-const [isOpen, setIsOpen] = useState(false);
+```text
+tests/*.spec.ts
 ```
 
-The menu is toggled with:
+Current Playwright suites:
 
-```tsx
-onClick={() => setIsOpen(!isOpen)}
+```text
+home.spec.ts
+intro.spec.ts
+menu.spec.ts
+navigation.spec.ts
+external-links.spec.ts
+responsive.spec.ts
 ```
 
-Desktop navigation can use:
+Keeping these suites separate prevents Playwright tests from being executed by Vitest.
 
-```tsx
-hidden md:flex
+---
+
+## Continuous Integration
+
+GitHub Actions is configured to automatically validate the project whenever code is pushed to the `main` branch or submitted through a pull request.
+
+The CI workflow performs:
+
+```text
+Checkout Repository
+        ↓
+Setup Node.js
+        ↓
+Install Dependencies
+        ↓
+Run ESLint
+        ↓
+Run Vitest
+        ↓
+Build Application
+        ↓
+Install Playwright
+        ↓
+Run E2E Tests
 ```
 
-Mobile navigation can use:
+The current GitHub Actions workflow successfully validates the automated test suite.
 
-```tsx
-md:hidden
+Current Vitest CI results:
+
+```text
+Test Files: 12 passed
+Tests:      32 passed
 ```
 
 ---
 
-# Menu Data
+## Routing
 
-Menu products are stored in:
+React Router is used for client-side navigation.
+
+| Route | Description |
+| --- | --- |
+| `/` | Home page |
+| `/menu` | Full bakery menu |
+| `/menu/:slug` | Individual menu item details |
+| `/about` | Brand and bakery information |
+| `/contact` | Store locations and contact information |
+
+---
+
+## Menu Data
+
+Menu content is stored separately from UI components in:
 
 ```text
 src/data/menuData.json
 ```
 
-The application currently contains approximately:
+Each item follows a structured data model.
 
-- 20 breads
-- 20 desserts
-- 20 drinks
-
-Total:
-
-```text
-~60 menu items
-```
-
-A menu item looks like this:
+Example:
 
 ```json
 {
   "id": 1,
-  "slug": "soft-cream-bread",
-  "name": "Soft Cream Bread",
+  "slug": "example-item",
+  "name": "Example Item",
   "category": "bread",
-  "description": "A soft and fluffy bread filled with light, sweet cream.",
-  "details": "This signature-style bread combines a pillowy texture with smooth, lightly sweetened cream.",
-  "price": 4.5,
-  "image": "/menu/bread/bread-01.jpeg",
+  "description": "Short product description.",
+  "details": "Detailed product information.",
+  "price": 5.99,
+  "image": "/menu/bread/example.jpeg",
   "recommended": true,
-  "bestSeller": true
+  "bestSeller": false
 }
 ```
 
----
-
-## Menu Item Fields
-
-### `id`
-
-Unique numeric identifier.
-
-```json
-"id": 1
-```
-
-Used as a React list key.
-
----
-
-### `slug`
-
-URL-friendly identifier.
-
-```json
-"slug": "soft-cream-bread"
-```
-
-Used to generate URLs such as:
+Shared menu types are defined in:
 
 ```text
-/menu/soft-cream-bread
-```
-
----
-
-### `name`
-
-Product name.
-
-```json
-"name": "Soft Cream Bread"
-```
-
----
-
-### `category`
-
-Current categories:
-
-```text
-bread
-dessert
-drink
-```
-
-Example:
-
-```json
-"category": "bread"
-```
-
----
-
-### `description`
-
-Short description displayed on menu cards.
-
-```json
-"description": "A soft and fluffy bread filled with light, sweet cream."
-```
-
----
-
-### `details`
-
-Longer description displayed on the menu detail page.
-
-```json
-"details": "This signature-style bread combines a pillowy texture with smooth, lightly sweetened cream."
-```
-
----
-
-### `price`
-
-Numeric price.
-
-```json
-"price": 4.5
-```
-
-The UI formats it using:
-
-```tsx
-item.price.toFixed(2)
-```
-
-Result:
-
-```text
-$4.50
-```
-
----
-
-### `image`
-
-Image path from the `public` directory.
-
-```json
-"image": "/menu/bread/bread-01.jpeg"
-```
-
-The actual image file is:
-
-```text
-public/menu/bread/bread-01.jpeg
-```
-
-Because files inside `public` are served from the site root, `public` is not included in the URL.
-
-Correct:
-
-```text
-/menu/bread/bread-01.jpeg
-```
-
-Incorrect:
-
-```text
-/public/menu/bread/bread-01.jpeg
-```
-
----
-
-### `recommended`
-
-Controls the Recommended badge.
-
-```json
-"recommended": true
-```
-
----
-
-### `bestSeller`
-
-Controls the Best Seller badge.
-
-```json
-"bestSeller": true
-```
-
-A product can have both badges at the same time.
-
-Example:
-
-```json
-"recommended": true,
-"bestSeller": true
-```
-
----
-
-# Menu Card
-
-Each menu item is rendered using `MenuCard.tsx`.
-
-Example:
-
-```tsx
-<MenuCard key={item.id} item={item} />
-```
-
-The card displays:
-
-- Product image
-- Category
-- Product name
-- Description
-- Price
-- Recommended badge
-- Best Seller badge
-- View Details button
-
----
-
-## Recommended and Best Seller Badges
-
-The badges are rendered independently.
-
-```tsx
-{item.recommended && (
-  <span>
-    Recommended
-  </span>
-)}
-
-{item.bestSeller && (
-  <span>
-    Best Seller
-  </span>
-)}
-```
-
-Because the conditions are independent, both badges can appear simultaneously.
-
----
-
-# Menu Card Hover Effects
-
-Menu cards use Tailwind's `group` utility.
-
-Example:
-
-```tsx
-<article className="group ... hover:-translate-y-2 hover:shadow-2xl">
-```
-
-When a card is hovered:
-
-- The card moves slightly upward
-- The shadow becomes stronger
-- The product image zooms in
-- The product title changes color
-
-Image hover:
-
-```tsx
-className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
-```
-
-Title hover:
-
-```tsx
-className="transition group-hover:text-amber-800"
-```
-
-This produces a more interactive product-card experience without additional JavaScript.
-
----
-
-# Menu Filtering
-
-The menu supports category filtering.
-
-Available filters:
-
-```text
-All
-Bread
-Dessert
-Drink
-```
-
-The active category is stored using React state:
-
-```tsx
-const [activeCategory, setActiveCategory] = useState("all");
-```
-
-Filtering example:
-
-```tsx
-if (activeCategory !== "all") {
-  result = result.filter(
-    (item) => item.category === activeCategory
-  );
-}
-```
-
----
-
-# Menu Search
-
-Users can search menu items by text.
-
-State:
-
-```tsx
-const [searchKeyword, setSearchKeyword] = useState("");
-```
-
-Filtering checks both the product name and description:
-
-```tsx
-const keyword = searchKeyword.toLowerCase();
-
-result = result.filter((item) => {
-  return (
-    item.name.toLowerCase().includes(keyword) ||
-    item.description.toLowerCase().includes(keyword)
-  );
-});
-```
-
----
-
-# Price Sorting
-
-The menu can be sorted by:
-
-- Default
-- Price: Low to High
-- Price: High to Low
-
-Example:
-
-```tsx
-if (sortOption === "price-low") {
-  result.sort((a, b) => a.price - b.price);
-}
-
-if (sortOption === "price-high") {
-  result.sort((a, b) => b.price - a.price);
-}
-```
-
----
-
-# `useMemo`
-
-Filtered menu results are calculated with `useMemo`.
-
-Example:
-
-```tsx
-const filteredItems = useMemo(() => {
-  let result = [...menuItems];
-
-  // filtering
-  // searching
-  // sorting
-
-  return result;
-}, [activeCategory, searchKeyword, sortOption]);
-```
-
-This keeps the filtering logic organized and recalculates results when relevant state changes.
-
----
-
-# Menu Sections
-
-Filtered items are separated by category:
-
-```tsx
-const breadItems = filteredItems.filter(
-  (item) => item.category === "bread"
-);
-
-const dessertItems = filteredItems.filter(
-  (item) => item.category === "dessert"
-);
-
-const drinkItems = filteredItems.filter(
-  (item) => item.category === "drink"
-);
-```
-
-Each category can then be passed into a reusable section component:
-
-```tsx
-<MenuSection title="Bread" items={breadItems} />
-<MenuSection title="Dessert" items={dessertItems} />
-<MenuSection title="Drinks" items={drinkItems} />
-```
-
----
-
-# Menu Detail Page
-
-Each menu card links to a unique product URL:
-
-```tsx
-<Link to={`/menu/${item.slug}`}>
-  View Details
-</Link>
-```
-
-Example URL:
-
-```text
-/menu/garlic-cream-cheese-bread
-```
-
-The route is defined as:
-
-```tsx
-<Route
-  path="/menu/:slug"
-  element={<MenuDetailPage />}
-/>
-```
-
-Inside `MenuDetailPage`, React Router provides the slug:
-
-```tsx
-const { slug } = useParams();
-```
-
-The correct product is found from the JSON data:
-
-```tsx
-const item = menuItems.find(
-  (menu) => menu.slug === slug
-);
-```
-
-If no matching product exists, the application displays a fallback message.
-
----
-
-# Product Images
-
-Images are stored inside:
-
-```text
-public/menu/
+src/types/menu.ts
 ```
 
 Example structure:
 
-```text
-public/menu/bread/bread-01.jpeg
-public/menu/bread/bread-02.jpeg
+```ts
+export type MenuCategory =
+  | 'bread'
+  | 'dessert'
+  | 'drink';
 
-public/menu/dessert/dessert-01.jpeg
-public/menu/dessert/dessert-02.jpeg
-
-public/menu/drink/drink-01.jpeg
-public/menu/drink/drink-02.jpeg
-```
-
-These images can be committed to GitHub normally.
-
-Example:
-
-```bash
-git add public/menu
-git commit -m "Add menu product images"
-git push
-```
-
-For production, optimized `.webp` images can reduce repository size and improve page load speed.
-
----
-
-# Home Page Components
-
-The homepage is separated into smaller reusable sections.
-
-## HeroSection
-
-The main introduction area.
-
-Includes:
-
-- Bakery introduction
-- Call-to-action buttons
-- Hero image area
-
----
-
-## SignatureSection
-
-Highlights important bakery categories and products.
-
----
-
-## StorySection
-
-Introduces the Shilla Bakery brand story.
-
----
-
-## VisitSection
-
-Provides navigation toward:
-
-- Store locations
-- Menu
-- Ordering
-
----
-
-# About Page
-
-`AboutPage.tsx` provides brand information and history.
-
-The current project content was written to reflect the Shilla Bakery brand and its long-standing bakery identity.
-
----
-
-# Contact Page
-
-`ContactPage.tsx` is designed to display location information.
-
-It can include:
-
-- Location name
-- Address
-- Phone number
-- Business hours
-- Catering information
-- Directions links
-
----
-
-# Styling
-
-The main global CSS file is:
-
-```text
-src/index.css
-```
-
-Example:
-
-```css
-@import "tailwindcss";
-
-html {
-  scroll-behavior: smooth;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  min-width: 320px;
-  font-family:
-    Inter,
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
-  background-color: #fffbeb;
-  color: #292524;
-}
-```
-
-Most UI styling is handled directly through Tailwind utility classes.
-
----
-
-# Git Workflow
-
-After making changes:
-
-```bash
-git status
-```
-
-Add changes:
-
-```bash
-git add .
-```
-
-Create a commit:
-
-```bash
-git commit -m "Describe the change"
-```
-
-Upload to GitHub:
-
-```bash
-git push
-```
-
-Example:
-
-```bash
-git add .
-git commit -m "Add responsive menu cards and menu data"
-git push
+export type MenuItem = {
+  id: number;
+  slug: string;
+  name: string;
+  category: MenuCategory;
+  description: string;
+  details: string;
+  price: number;
+  image: string;
+  recommended: boolean;
+  bestSeller: boolean;
+};
 ```
 
 ---
 
-# GitHub Authentication
+## Responsive Design
 
-GitHub no longer accepts account passwords for HTTPS Git operations.
+Tailwind CSS is used throughout the application to implement:
 
-This project can use GitHub CLI authentication:
+- Responsive layouts
+- Responsive grids
+- Mobile navigation
+- Flexible spacing
+- Responsive typography
+- Adaptive menu cards
+- Responsive video layouts
+- Mobile-friendly content sections
 
-```bash
-gh auth login
-```
+The application uses a warm bakery-inspired design system built around:
 
-Typical selections:
-
-```text
-GitHub.com
-HTTPS
-Login with a web browser
-```
-
-After authentication:
-
-```bash
-git push
-```
-
-works without entering the GitHub account password each time.
+- Stone
+- White
+- Amber
+- Warm brown tones
 
 ---
 
-# Development Notes
+## Accessibility
 
-During setup, several development environment issues were encountered and resolved.
+Accessibility considerations include:
 
-## Node Version
+- Semantic HTML
+- Accessible navigation
+- Descriptive links
+- `aria-label` attributes
+- Keyboard interaction
+- Escape key support
+- Meaningful image alternative text
+- Accessible phone links
+- Accessible email links
 
-An older Node version caused compatibility issues with Vite.
-
-The project was switched to:
-
-```text
-Node.js 24
-```
-
-using `nvm`.
-
----
-
-## Tailwind CSS Version
-
-The project originally encountered confusion between Tailwind v3 and v4 setup instructions.
-
-The final project uses Tailwind CSS v4 with:
-
-```css
-@import "tailwindcss";
-```
-
-and the Vite plugin:
+Playwright tests also use accessibility-based selectors such as:
 
 ```ts
-@tailwindcss/vite
+page.getByRole()
 ```
+
+This helps verify that important interface elements expose meaningful roles and accessible names.
 
 ---
 
-## TypeScript `erasableSyntaxOnly`
+## Responsive Testing
 
-An editor warning related to:
+The application includes automated checks for horizontal viewport overflow.
+
+Example:
+
+```ts
+const hasOverflow = await page.evaluate(() => {
+  return (
+    document.documentElement.scrollWidth >
+    document.documentElement.clientWidth
+  );
+});
+
+expect(hasOverflow).toBe(false);
+```
+
+This helps prevent layout issues on smaller screens.
+
+---
+
+## Deployment
+
+The project is designed for deployment through Vercel.
+
+Production build command:
+
+```bash
+npm run build
+```
+
+Build output directory:
 
 ```text
-erasableSyntaxOnly
+dist
 ```
 
-was caused by a TypeScript/editor version mismatch.
-
-Updating the development environment resolved the issue.
+When Vercel is connected to the GitHub repository, deployments can be triggered automatically when changes are pushed.
 
 ---
 
-## GitHub CLI on Intel Mac
+## CI/CD Workflow
 
-Installing GitHub CLI through Homebrew initially failed because the installed macOS Command Line Tools were outdated.
-
-The Command Line Tools were updated before reinstalling:
-
-```bash
-brew install gh
-```
-
-Afterward, GitHub authentication could be configured with:
-
-```bash
-gh auth login
+```text
+Local Development
+        ↓
+Git Commit
+        ↓
+GitHub
+        ↓
+GitHub Actions
+        ↓
+ESLint
+        ↓
+Vitest
+        ↓
+Production Build
+        ↓
+Playwright E2E
+        ↓
+Vercel Deployment
 ```
 
 ---
 
-# Future Improvements
+## Engineering Decisions
 
-Potential next steps include:
+### Reusable Component Architecture
 
-- Improved homepage visuals
-- Real Shilla Bakery product photography
-- Better mobile navigation animations
-- Store maps
-- Location-specific menus
-- Online ordering links
-- Accessibility improvements
-- Loading states
-- 404 page
+Large pages are split into smaller reusable components.
+
+For example, the home page is composed of:
+
+```text
+HeroSection
+SignatureSection
+StorySection
+VisitSection
+InstagramSection
+```
+
+This improves readability, maintainability, and future scalability.
+
+---
+
+### Shared TypeScript Types
+
+Menu-related components share common TypeScript definitions instead of duplicating interfaces.
+
+This provides:
+
+- Consistent data structures
+- Better editor support
+- Easier refactoring
+- Reduced duplication
+- Compile-time type checking
+
+---
+
+### Data Separated From Presentation
+
+Menu information is stored in structured JSON rather than being hardcoded directly into React components.
+
+This makes it easier to:
+
+- Add products
+- Remove products
+- Change prices
+- Update descriptions
+- Replace images
+- Change recommendations
+- Maintain categories
+
+without changing UI logic.
+
+---
+
+### Separate Unit and E2E Testing
+
+Vitest and Playwright serve different purposes.
+
+Vitest is used for fast component-level validation.
+
+```text
+src/**/*.test.tsx
+```
+
+Playwright is used for complete user workflows.
+
+```text
+tests/*.spec.ts
+```
+
+This provides both fast development feedback and real browser validation.
+
+---
+
+### Cross-Platform Compatibility
+
+The project is developed on macOS and tested through GitHub Actions on Linux.
+
+Component paths and filenames use consistent casing to avoid module resolution issues between case-insensitive and case-sensitive file systems.
+
+---
+
+## Quality Assurance
+
+Before production deployment, the project can be fully validated using:
+
+```bash
+npm run test:run
+npm run lint
+npm run build
+npm run test:e2e
+```
+
+Additional coverage verification:
+
+```bash
+npm run test:coverage
+```
+
+Current project validation status:
+
+```text
+Vitest                  PASS
+React Testing Library   PASS
+Playwright E2E          PASS
+ESLint                   PASS
+TypeScript Build         PASS
+Vite Production Build    PASS
+GitHub Actions CI        PASS
+```
+
+---
+
+## Future Improvements
+
+Potential future improvements include:
+
+- Backend API integration
+- Online ordering
+- Shopping cart functionality
+- Customer accounts
+- Authentication
+- Online payments
+- Real-time product availability
+- Store-specific menus
+- Content management system
 - Image optimization
-- SEO metadata
-- Menu availability indicators
-- Seasonal products
-- Featured products section
-- Improved menu detail pages
-
----
-
-# Current Status
-
-The project currently has:
-
-- React + Vite setup
-- TypeScript
-- Tailwind CSS v4
-- React Router
-- Responsive UI
-- Mobile navigation
-- Shared layout
-- Home page sections
-- Menu JSON data
-- Around 60 menu items
-- Menu images
-- Search
-- Category filtering
-- Price sorting
-- Product detail routes
-- Recommended badges
-- Best Seller badges
-- Responsive menu cards
-- About page
-- Contact page
-- GitHub repository integration
-
----
-
-## Repository
-
-GitHub:
-
-```text
-https://github.com/dongyunkim96/Shilla-Bakery
-```
+- Lazy loading
+- SEO improvements
+- Open Graph metadata
+- Structured business data
+- Analytics integration
+- Accessibility auditing
+- Performance monitoring
+- Automated deployment previews
 
 ---
 
 ## Author
 
-**Dongyun Kim**
-
+**Dongyun Kim**  
 Front-End Developer
+
+GitHub:  
+https://github.com/dongyunkim96
+
+Portfolio:  
+https://dongyunkim.vercel.app
 
 ---
 
-## Disclaimer
+## Repository
 
-This project is a front-end development project inspired by Shilla Bakery's public-facing brand and website experience.
+https://github.com/dongyunkim96/Shilla-Bakery
 
-Product names, prices, descriptions, images, and menu availability used in this project may be sample or development content unless otherwise verified against current official store information.
+---
 
-For current products, prices, store hours, and ordering information, refer to the official Shilla Bakery website.
+## License
+
+This project was created as a front-end development and portfolio project.
+
+Shilla Bakery brand names, logos, product names, imagery, and other business-related materials remain the property of their respective owners.
+
+The source code in this repository is intended for development, demonstration, and portfolio purposes unless otherwise specified.
